@@ -1,0 +1,48 @@
+.container_nav{
+    background: #ffffff;
+    background: linear-gradient(128deg, rgb(49, 27, 247)0%, rgb(190, 17, 147) 100%);
+    min-width: 120px;
+    /* width: 100rem; */
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_nav >div > a{
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 1rem;
+
+}
+
+.container_links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    /* align-items: start; */
+}
+
+/* Logo Styles */
+
+.container_logo{
+    background-color: black;
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.container_logo > p{
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+  font-weight: bold;
+  font-size: 0.8rem;
+}

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Index from '../pages/Index'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+import Store from '../pages/Store'
 
 const appRoutes = () => {
     return (
@@ -10,16 +11,20 @@ const appRoutes = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path="/register" element={
-                        <Register/>
+                        <Register />
                     }
                     />
 
                     <Route path="/" element={
-                        <Index/>
+                        <Index />
                     }
                     />
                     <Route path="/login" element={
                         <Login />
+                    }
+                    />
+                    <Route path="/store" element={
+                        <Store />
                     }
                     />
                 </Routes>
