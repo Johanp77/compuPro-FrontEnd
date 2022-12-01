@@ -1,3 +1,5 @@
+import { createContext, useEffect, useState } from "react";
+
 
 export async function getUsers() {
     // const request = await fetch("http://localhost:8080/api/users",{
@@ -12,17 +14,38 @@ export async function getUsers() {
     // console.log(users);
 }
 
-export async function getProducts() {
-    const request = await fetch("http://localhost:8080/api/products",{
+// const dataProducts = createContext({})
+
+
+async function requestAsync(promise){
+    const request = await fetch("http://localhost:8080/api/products", {
         method: "GET",
         headers: {
             "Accept": "application/json",
             "content-type": "application/json"
         }
     })
-    const products = await request.json()
+}
 
-    console.log(products);
+export function GetProducts(promise) {
+
+
+    requestAsync(promise).then(data => {
+        console.log(data);
+    })
+
+    // .then(dataProducts.Provider)
+    // const products = await request.json()
+
+    // setProducts(products)
+    // .then()
+
+
+    // setValue(products)
+
+    // console.log(products);
+    // console.log(dataProducts)
+    // return null;
 }
 
 export const headers = () => {

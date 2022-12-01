@@ -4,7 +4,7 @@ import { getProducts } from '../context'
 
 const Index = () => {
   return (
-    getProducts(),
+    // getProducts(),
     <div>
         <div>
             <NavBar/>

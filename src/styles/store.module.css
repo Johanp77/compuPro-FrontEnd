@@ -1,0 +1,37 @@
+.card {
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgba(235, 232, 232, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .card {
+      animation: card-animation 1.5s ease-in-out;
+    }
+  }
+  
+  @keyframes card-animation {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.07);
+  }
+  
+
+
+  /* .container_slider{
+    display: flex;
+  } */
