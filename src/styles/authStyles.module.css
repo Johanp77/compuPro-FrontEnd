@@ -1,3 +1,6 @@
+
+/* *Login Page Styles */
+
 .login_main_container{
     display: flex;
     flex-direction: column;
@@ -21,7 +24,7 @@
 }
 
 
-.recirect_register{
+.redirect_register{
     text-decoration: none;
     text-align: center;
     text-emphasis: none;
@@ -57,5 +60,42 @@
     /* background-color: linear-gradient(120deg, #a1228c 70%); */
     /* background: linear-gradient(128deg, rgb(49, 27, 247)0%, rgb(190, 17, 147) 100%); */
 
+}
 
+/* *Register Page Styles */
+
+.register_main_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.register_main_container > h1{
+    text-align: center;
+}
+
+/* *Form Register Styles */
+
+.form_login_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form_login_container > div{
+    justify-content: center;
+    margin: 0.9rem auto;
+}
+
+.container_redirect_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    /* padding: 0 0 1rem 0; */
+}
+.container_redirect_login{
+    text-decoration: none;
+    text-align: center;
+    text-emphasis: none;
 }

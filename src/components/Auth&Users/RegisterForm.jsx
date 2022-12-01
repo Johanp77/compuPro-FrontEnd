@@ -1,7 +1,10 @@
+import { TextField } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { createUser } from '../../context'
 import useForm from '../../hooks/useForm'
+import styles from '../../styles/authStyles.module.css'
+
 
 const RegisterForm = () => {
 
@@ -26,32 +29,34 @@ const RegisterForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.form_login_container} onSubmit={handleSubmit}>
         <div>
-          <label>Name</label>
-          <input name="user_name" placeholder="Enter Name" value={user_name} type="text" onChange={handleInputChange} required />
+          {/* <label>Name</label> */}
+          <TextField label="Name" name="user_name" placeholder="Enter Name" value={user_name} type="text" onChange={handleInputChange} required />
         </div>
         <div>
-          <label>Email</label>
-          <input name="email" value={email} type="email" onChange={handleInputChange} required />
+          {/* <label>Email</label> */}
+          <TextField label="Email" name="email" value={email} type="email" onChange={handleInputChange} required />
         </div>
         <div>
-          <label>Password</label>
-          <input name="password" value={password} type="password" onChange={handleInputChange} required />
+          {/* <label>Password</label> */}
+          <TextField label="Password" name="password" value={password} type="password" onChange={handleInputChange} required />
         </div>
         <div>
-          <label>client_address</label>
-          <input namee="client_address" value={client_address} type="text" onChange={handleInputChange} />
+          {/* <label>client_address</label> */}
+          <TextField label="Your Address" name="client_address" value={client_address} type="text" onChange={handleInputChange} />
         </div>
         <div>
-          <label>client_phone</label>
-          <input name="client_phone" value={client_phone} type="text" onChange={handleInputChange} />
+          {/* <label>client_phone</label> */}
+          <TextField label="Your Phone" name="client_phone" value={client_phone} type="text" onChange={handleInputChange} />
         </div>
-        <button type="submit">Submit</button>
+        <div>
+          <button className={styles.button_submit_form_login} type="submit">Submit</button>
+        </div>
       </form>
-      <div>
+      <div className={styles.container_redirect_login}>
         <p>Already have an account?</p>
-        <Link to='/login'>Login here</Link>
+        <Link className={styles.container_redirect_login} to='/login'>Login here</Link>
       </div>
     </div>
   )

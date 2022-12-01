@@ -17,7 +17,7 @@ const Login = () => {
                 </div>
                 <div className={styles.second_child_main_container}>
                     <p className={styles.suggestion_login}>Dont you have an account yet?</p>
-                    <Link className={styles.recirect_register} to='/register'>Register here</Link>
+                    <Link className={styles.redirect_register} to='/register'>Register here</Link>
                 </div>
             </div>
         </div>
