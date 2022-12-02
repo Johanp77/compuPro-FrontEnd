@@ -38,7 +38,14 @@ export function StoreProvider(props) {
         })
 
 
-        fetch('http://localhost:8080/api/products')
+        fetch('http://localhost:8080/api/products', {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "content-type": "application/json"
+            }
+            
+        })
             .then(response => response.json())
             .then(json => setProductos(json));
 
