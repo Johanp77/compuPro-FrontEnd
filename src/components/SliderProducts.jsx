@@ -9,7 +9,7 @@ const SliderProducts = () => {
 
   const products = useGetProducts()
 
-  console.log(products);
+  // console.log(products);
 
   const settings = {
     dots: false,
@@ -25,17 +25,17 @@ const SliderProducts = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           infinite: true,
           dots: false,
           autoplaySpeed: 4000,
         }
       },
       {
-        breakpoint: 800,
+        breakpoint: 750,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
           autoplaySpeed: 5000,
@@ -52,7 +52,6 @@ const SliderProducts = () => {
     ]
   };
   return (
-    console.log(products),
     <div className="SlideSize">
       <h2>Monitors</h2>
       <Slider {...settings}>

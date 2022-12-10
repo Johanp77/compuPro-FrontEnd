@@ -52,12 +52,15 @@ code {
 .slides .slick-prev,
 .slides .slick-next {
   /* background-color: green; */
-  color: black;
+  /* color: black; */
+  color: #7c37bd;
 }
 
 .slides .slick-prev:before,
 .slides .slick-next:before {
   color: rgb(26, 24, 24);
+  color: #6b11be;
+
 }
 
 

@@ -17,7 +17,7 @@ export async function getUsers() {
 // const dataProducts = createContext({})
 
 
-async function requestAsync(promise){
+async function requestAsync(promise) {
     const request = await fetch("http://localhost:8080/api/products", {
         method: "GET",
         headers: {
@@ -82,7 +82,62 @@ export async function createUser(userData) {
         },
         body: JSON.stringify(userData)
     })
-    const users = await request.json()
+    const response = await request.json()
+
+        .then(function (response) {
+            if (response.ok) {
+                alert("Success")
+            }
+            else {
+                alert("Something was wrong")
+            }
+        })
+        .catch(function (error) {
+            if (error.code === "Unexpected end of JSON input") {
+                alert("Invalid JSON")
+            }
+            else alert("Error: " + error.message)
+        })
+
+    // if (response.Authorization === "Bearer"){
+    //     alert("sucess")
+    // }
+    // else{
+    //     alert("error")
+    // }
+}
+
+export function PQRProvider2(props) {
+
+
+
+
+
+        fetch("http://localhost:8080/api/newpqr", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "content-type": "application/json",
+                "Authorization": localStorage.token
+            },
+            body: JSON.stringify(props)
+
+        })
+            // const users = request.json()
+
+            .then(function (response) {
+                if (response.ok) {
+                    alert("Success")
+                }
+                else {
+                    alert("Something was wrong")
+                }
+            })
+
+
+
+
+
 }
 
 

@@ -8,15 +8,14 @@ import styles from '../../styles/authStyles.module.css'
 
 const RegisterForm = () => {
 
-  ////: Fix the problem with empty fields when the data is send to the server.
-  // TODO: Set the default value of client_address to "-"
+
 
   const [formValue, handleInputChange, rest] = useForm({
     user_name: '',
     email: '',
     password: '',
-    client_address: '-',
-    client_phone: null
+    client_address: undefined,
+    client_phone: undefined
   })
 
   const { user_name, email, password, client_address, client_phone } = formValue
@@ -32,15 +31,15 @@ const RegisterForm = () => {
       <form className={styles.form_login_container} onSubmit={handleSubmit}>
         <div>
           {/* <label>Name</label> */}
-          <TextField label="Name" name="user_name" placeholder="Enter Name" value={user_name} type="text" onChange={handleInputChange} required />
+          <TextField label="Name" name="user_name" placeholder="Name required" value={user_name} type="text" onChange={handleInputChange} required />
         </div>
         <div>
           {/* <label>Email</label> */}
-          <TextField label="Email" name="email" value={email} type="email" onChange={handleInputChange} required />
+          <TextField label="Email" name="email" placeholder="Email required" value={email} type="email" onChange={handleInputChange} required />
         </div>
         <div>
           {/* <label>Password</label> */}
-          <TextField label="Password" name="password" value={password} type="password" onChange={handleInputChange} required />
+          <TextField label="Password" name="password" placeholder="Password required" value={password} type="password" onChange={handleInputChange} required />
         </div>
         <div>
           {/* <label>client_address</label> */}

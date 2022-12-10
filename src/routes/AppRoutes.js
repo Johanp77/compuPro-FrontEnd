@@ -2,10 +2,13 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Index from '../pages/Index'
 import Login from '../pages/Login'
+import PQR from '../pages/PQR'
 import Register from '../pages/Register'
 import Store from '../pages/Store'
 
 const appRoutes = () => {
+
+    
     return (
         <>
             <BrowserRouter>
@@ -25,6 +28,10 @@ const appRoutes = () => {
                     />
                     <Route path="/store" element={
                         <Store />
+                    }
+                    />
+                    <Route path="/pqr" element={
+                        <PQR />
                     }
                     />
                 </Routes>
