@@ -5,5 +5,44 @@
 
 .subtitle{
     font-weight: normal;
-    padding: 0rem 4rem;
+    /* padding: 0rem 4rem; */
+    margin: 1rem 4rem;
+}
+
+.form_main_container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form_main_container > div{
+    margin: 0.8rem auto;
+}
+
+
+.container_page_pqr_form{
+    margin: 0 auto;
+
+}
+
+.textField{
+    width: 18rem;
+}
+
+.select{
+    width: 11rem;
+}
+
+.button_send{
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    /* border-radius: 5px; */
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    color: #ffffff;
+    /* background-color: #5b0cda; */
+    background: linear-gradient(128deg, rgb(49, 27, 247)0%, rgb(190, 17, 147) 100%);
+
+    transition: 500ms ease-in-out;
 }
