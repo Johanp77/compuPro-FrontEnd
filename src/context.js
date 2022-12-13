@@ -84,6 +84,8 @@ export async function createUser(userData) {
     })
     const response = await request.json()
 
+    console.log(response)
+
         .then(function (response) {
             if (response.ok) {
                 alert("Success")
@@ -106,6 +108,7 @@ export async function createUser(userData) {
     //     alert("error")
     // }
 }
+
 
 export function PQRProvider2(props) {
 
@@ -153,9 +156,11 @@ export async function login(userData) {
     })
     const response = await request.text()
 
+    console.log(response)
     if (response !== "FAIL") {
         localStorage.token = response;
         localStorage.email = userData.email;
+        localStorage.id = userData.id;
         alert("Bienvenido")
     } else {
         alert("Incorrect credentials")
